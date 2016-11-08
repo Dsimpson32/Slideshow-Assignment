@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Places I want to Go.</title>
+</head>
+<header>
+   <div id="header">
+	<h1>Places I would Love to Go</h1>
+	<h4>By Daquon Simpson</h4>
+	</div>
+</header>
+<br>
+<br>
+<br>
+<body>
+<center>
+<div>
+	<img class="places" src="uk.jpeg">
+</div>
+<div>
+	<img class="places" src="paris.jpeg">
+</div>
+<div>
+	<img class="places" src="toyko.jpeg">
+</div>
+<div>
+	<img class="places" src="rome.jpeg">
+</div>
+<div>
+	<img class="places" src="china.jpeg">
+</div>
+<div>
+	<img class="places" src="iceland.jpeg">
+</div>
+<br>
+<br>
+<a class="back-button" onclick="plusDivs(-1)">Back</a>
+ <a class="forward-button" onclick="plusDivs(+1)">Next</a>
+ <br>
+ <br>
+ <br>
+ <p>Places I would love to visit include the Uk, Paris, Tokyo, Rome, China, and Iceland.</p>
+ </center>
+</body>
+<script type="text/javascript">
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+  	showDivs(slideIndex += n);
+  }	
+
+  function showDivs(n) {
+  	var i;
+  	var x = document.getElementsByClassName("places");
+  	if (n > x.length) {slideIndex = 1}
+  	if (n < 1) {slideIndex = x.length}
+  	for (i = 0; i < x.length; i++) {
+  		x[i].style.display = "none";}
+
+  	x[slideIndex-1].style.display = "block";
+  }
+</script>
+
+<style type="text/css">
+	.places{
+		height: 300px;
+		width: 500px;
+		border-style: solid;
+		border-color: black;
+
+	
+	}
+	body{
+		background-color: #A0ced9;
+	}
+
+	#header{
+		text-align: center;
+		background-color: #Fcffeb;
+		border-top: -40px;
+		border-style: solid;
+		border-color: black;
+	}
+    .back-button{
+	border-radius:15px;
+	border:2px solid #333029;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	background-color: #Fcffeb;
+}
+
+   .forward-button{
+	border-radius:15px;
+	border:2px solid #333029;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Arial;
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	background-color: #Fcffeb;
+}
+    p {
+    	font-family: Arial;
+    	font-weight: bold;
+    }
+</style>
+</html>
